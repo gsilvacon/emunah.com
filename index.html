@@ -1,17 +1,503 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página Inicial</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #333; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emunáh - מוּנָה</title>
+  <meta name="description" content="Baixe gratuitamente o livro 'Aquele Que Tem Sede, Venha a Mim e Beba — Como Diz a Escritura' e descubra a fé que Jesus descreve em João 7:37-38.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32">
+  <!-- Open Graph -->
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="Aquele Que Tem Sede, Venha a Mim e Beba — Uma Jornada pela Fé">
+  <meta property="og:description" content="Baixe gratuitamente o livro que resgata a fé que Jesus descreve em João 7:37-38 — uma jornada pela emunáh hebraica além do conceito grego de pistis.">
+  <meta property="og:image" content="https://seudominio.com/img/Capa_book_livro.jpg">
+  <meta property="og:url" content="https://seudominio.com">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Emunáh - מוּנָה">
+  <meta property="book:author" content="https://instagram.com/givaldosilvacon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aquele Que Tem Sede, Venha a Mim e Beba">
+  <meta name="twitter:description" content="Baixe gratuitamente o livro que resgata a fé que Jesus descreve em João 7:37-38.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Aquele Que Tem Sede, Venha a Mim e Beba — Como Diz a Escritura",
+    "alternativeHeadline": "Uma Jornada pela Fé",
+    "author": {
+      "@type": "Person",
+      "name": "Givaldo S. Conceição",
+      "sameAs": "https://instagram.com/givaldosilvacon"
+    },
+    "description": "Uma jornada pela fé que Jesus descreve em João 7:37-38, resgatando o conceito hebraico de emunáh.",
+    "inLanguage": "pt-BR",
+    "bookFormat": "EBook",
+    "numberOfPages": "200+",
+    "url": "https://seudominio.com"
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Bem-vindo ao Meu Site</h1>
-    <p>Este é um exemplo simples de uma página HTML.</p>
-    <a href="https://www.exemplo.com">Visite Exemplo.com</a>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="container">
+      <span class="nav-logo">⇥ Emunáh - מוּנָה</span>
+      <button class="nav-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#livro">O Livro</a></li>
+        <li><a href="#autor">Autor</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contribuir">Contribuir</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="livro">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Aquele Que Tem Sede,<br>
+          Venha a Mim e Beba
+        </h1>
+        <p class="hero-sub-alt">Uma Jornada pela Fé</p>
+        <p class="hero-sub">Como Diz a Escritura</p>
+        <p class="hero-verse">— João 7:37–38</p>
+        <div class="hero-actions">
+          <a href="#downloads" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Baixar Agora
+          </a>
+          <a href="https://instagram.com/givaldosilvacon" target="_blank" rel="noopener" class="btn btn-instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Seguir
+          </a>
+          <a href="#sinopse" class="btn btn-outline">
+            Saiba Mais
+          </a>
+        </div>
+      </div>
+      <div class="hero-cover">
+        <picture>
+          <source srcset="img/Capa_book_livro.jpg" type="image/jpeg">
+          <img src="img/Capa_book_livro.jpg" alt="Capa do Livro Aquele Que Tem Sede, Venha a Mim e Beba" loading="eager">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYNOPSIS -->
+  <section class="section" id="sinopse">
+    <div class="container container--narrow">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Uma Jornada pela Fé</h2>
+      </div>
+      <div class="synopsis-grid">
+        <div class="synopsis-text fade-in">
+          <p>
+            <strong>E se a fé que herdamos não é a fé que a Escritura descreve?</strong>
+          </p>
+          <p>
+            O livro parte de um diagnóstico revelador: a compreensão cristã da fé foi moldada
+            por séculos de influência filosófica grega, transformando o conceito hebraico de
+            <em>emunáh</em> — confiança que sustenta peso, fé existencial que se apoia numa Pessoa —
+            no conceito grego de <em>pistis</em> — assentimento intelectual a proposições.
+            O resultado é uma geração que "crê" nas doutrinas certas, mas nunca foi ensinada
+            sobre o que realmente significa <strong>vir, beber, apoiar o peso em Deus</strong>
+            e tornar-se canal de água viva.
+          </p>
+          <p>
+            Em cinco movimentos — <strong>O Problema, O Mapa, A Jornada, A Evidência, O Horizonte</strong> —
+            o livro percorre o processo exato que Jesus descreve em uma única declaração no
+            clímax da Festa dos Tabernáculos (João 7:37–38): da sede que reconhece a necessidade
+            ao transbordamento que abençoa o mundo.
+          </p>
+          <p>
+            Rigorosamente bíblico e pastoralmente acessível, este livro não pede que o leitor
+            ore uma fórmula ou subscreva um sistema. Pede apenas uma coisa: <strong>vem</strong>.
+          </p>
+        </div>
+        <div class="chapter-list fade-in fade-in--delay-1">
+          <div class="chapter-part">
+            <h3 class="part-title">Parte I <span class="part-divider">—</span> <span class="part-name">O Problema</span></h3>
+            <p class="part-subtitle">Por Que Não Sabemos o Que É Fé</p>
+            <ul class="part-chapters">
+              <li><span class="ch-num">1</span> A Fé que Herdamos Não É a Fé da Escritura</li>
+              <li><span class="ch-num">2</span> O Contexto que Muda Tudo: A Festa dos Tabernáculos</li>
+              <li><span class="ch-num">3</span> A Raiz que Ninguém Nos Ensinou: אמן (AMN)</li>
+            </ul>
+          </div>
+          <div class="chapter-part">
+            <h3 class="part-title">Parte II <span class="part-divider">—</span> <span class="part-name">O Mapa</span></h3>
+            <p class="part-subtitle">O Que as Escrituras Dizem Sobre Quem É Jesus</p>
+            <ul class="part-chapters">
+              <li><span class="ch-num">4</span> A Água que Atravessa Toda a Escritura</li>
+              <li><span class="ch-num">5</span> O Servo que Ninguém Esperava: Isaías 53</li>
+              <li><span class="ch-num">6</span> O Rei Eterno: Salmos e o Pacto Davídico</li>
+              <li><span class="ch-num">7</span> O Nome Acima de Todo Nome: EU SOU</li>
+              <li><span class="ch-num">8</span> O Cordeiro que a Escritura Sempre Anunciou</li>
+            </ul>
+          </div>
+          <div class="chapter-part">
+            <h3 class="part-title">Parte III <span class="part-divider">—</span> <span class="part-name">A Jornada</span></h3>
+            <p class="part-subtitle">Como Se Crê Como Diz a Escritura</p>
+            <ul class="part-chapters">
+              <li><span class="ch-num">9</span> O Ponto de Partida: A Sede</li>
+              <li><span class="ch-num">10</span> Ouvir de Verdade: שָׁמַע (Shama)</li>
+              <li><span class="ch-num">11</span> Voltar-se: שׁוּב (Shuv)</li>
+              <li><span class="ch-num">12</span> Apoiar o Peso: בָּטַח (Vatach)</li>
+              <li><span class="ch-num">13</span> Beber: O Ato de Receber por Dentro</li>
+              <li><span class="ch-num">14</span> Nascer de Novo: O Que Só Deus Pode Fazer</li>
+            </ul>
+          </div>
+          <div class="chapter-part">
+            <h3 class="part-title">Parte IV <span class="part-divider">—</span> <span class="part-name">A Evidência</span></h3>
+            <p class="part-subtitle">Os Rios que Fluem: Como Saber que Aconteceu</p>
+            <ul class="part-chapters">
+              <li><span class="ch-num">15</span> O Sinal Interno: Abba Pai</li>
+              <li><span class="ch-num">16</span> O Sinal Externo: Os Rios que Transbordam</li>
+              <li><span class="ch-num">17</span> A Fome que Só Cresce</li>
+            </ul>
+          </div>
+          <div class="chapter-part">
+            <h3 class="part-title">Parte V <span class="part-divider">—</span> <span class="part-name">O Horizonte</span></h3>
+            <p class="part-subtitle">Onde Esta Fé Leva</p>
+            <ul class="part-chapters">
+              <li><span class="ch-num">18</span> Da Fonte ao Rio: Tornando-se Canal</li>
+              <li><span class="ch-num">19</span> Perseverar: A Fé no Tempo Longo</li>
+              <li><span class="ch-num">20</span> O Convite Final: Apocalipse 22:17</li>
+            </ul>
+          </div>
+          <div class="chapter-part">
+            <h3 class="part-title">Apêndices</h3>
+            <ul class="part-chapters">
+              <li><span class="ch-num">A</span> Glossário de Termos Hebraicos e Gregos Essenciais</li>
+              <li><span class="ch-num">B</span> Mapa das Tipologias: As Linhas da Escritura que Apontam para Cristo</li>
+              <li><span class="ch-num">C</span> Guia de Estudo em Grupo</li>
+              <li><span class="ch-num">D</span> Para Aprofundar: Recursos em Hebraico Bíblico e Contexto do Segundo Templo</li>
+              <li><span class="ch-num">E</span> Perguntas Frequentes e Objeções</li>
+              <li><span class="ch-num">F</span> Diálogo com os Pais Gregos: Suavizando a Dicotomia</li>
+              <li><span class="ch-num">G</span> Índice Remissivo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section class="section section--white" id="autor">
+    <div class="container container--narrow">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Sobre o Autor</h2>
+      </div>
+      <div class="author-grid fade-in fade-in--delay-1">
+        <div class="author-photo">
+          <img src="img/autor.jpg" alt="Givaldo S. Conceição">
+        </div>
+        <div class="author-info">
+          <p>
+            <b>Givaldo S. Conceição</b> é pastor evangélico natural de Sergipe, com longa trajetória
+            no ministério da Palavra. Alia o rigor do estudo bíblico à sensibilidade pastoral, tendo
+            dedicado anos ao estudo dos evangelhos e da fé genuína que Jesus valoriza.
+            <em>Aquele Que Tem Sede, Venha a Mim e Beba — Uma Jornada pela Fé como diz a Escritura</em>
+            é fruto de sua jornada pessoal de busca por uma fé mais profunda e transformadora.
+          </p>
+          <p>
+            Converteu-se em fevereiro de 1998 e, desde então, integra o ministério de louvor da igreja
+            local — inicialmente como membro da equipe e posteriormente como líder. Também atua há mais
+            de 20 anos no ensino e na formação de novos líderes através da Escola Bíblica Dominical (EBD)
+            e da Escola de Discípulos, da qual é diretor atualmente.
+          </p>
+          <p>
+            Sua área de formação é Tecnologia da Informação, com especialização em Qualidade de Software.
+            Cursou Licenciatura Plena em Ciências da Religião pela Universidade Federal de Sergipe (UFS),
+            atualmente com o curso trancado.
+          </p>
+          <p>
+            Este livro nasceu durante a pesquisa de <em>Atos de Fé — Encontros que Impressionaram o Filho de Deus</em>,
+            obra sobre dez encontros transformadores com Jesus: o centurião romano (Mt 8:5-13), a mulher com
+            fluxo de sangue (Mc 5:25-34), a mulher cananeia (Mt 15:21-28), os quatro amigos do paralítico
+            (Mc 2:1-12), Jairo (Mc 5:21-43), os dois cegos (Mt 9:27-31), o leproso (Mt 8:1-4), a mulher
+            pecadora (Lc 7:36-50), Bartimeu (Mc 10:46-52) e a viúva da oferta (Mc 12:41-44). Ao estudar
+            esses relatos, o autor foi confrontado pela pergunta de Jesus em João 7:37-38 —
+            <em>"Se alguém tem sede, venha a mim e beba. Quem crê em mim, como diz a Escritura, rios de
+            água viva correrão do seu ventre."</em> — e pela interrogação que dela brotou: afinal, o que
+            as Escrituras realmente dizem sobre crer? Existe uma forma específica de fé que Jesus reconhece?
+            Foi dessa inquietação que surgiu <em>Aquele Que Tem Sede, Venha a Mim e Beba — Uma Jornada pela
+            Fé como diz a Escritura</em>.
+          </p>
+          <div class="author-contact">
+            <a href="https://instagram.com/givaldosilvacon" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> @givaldosilvacon
+            </a>
+            <a href="mailto:givaldosilvacon@gmail.com">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> givaldosilvacon@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOADS -->
+  <section class="section section--alt" id="downloads">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Baixe o Livro Gratuitamente</h2>
+        <p class="section-desc">
+          Escolha o formato que preferir. O livro é 100% gratuito — contribua voluntariamente
+          se desejar.
+        </p>
+      </div>
+      <div class="downloads-grid">
+        <div class="download-card download-card--pdf fade-in" data-dl-key="pdf_completo">
+          <div class="download-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h3 class="download-card-title">PDF Completo</h3>
+          <p class="download-card-desc">Livro integral com todos os 20 capítulos, epílogo e 7 apêndices.</p>
+          <div class="download-card-meta">
+            <a href="book/Aquele%20Que%20Tem%20Sede%2C%20Venha%20a%20Mim%20e%20Beba%20-%20Como%20Diz%20a%20Escritura%20-%2016x23%20-%20PDF%20-%20Completo.pdf"
+               class="btn btn-primary btn-sm" download>Baixar PDF</a>
+            <span class="download-count"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> <strong>0</strong> downloads</span>
+          </div>
+          <div class="download-card-extra">
+            <a href="book/Aquele%20Que%20Tem%20Sede%2C%20Venha%20a%20Mim%20e%20Beba%20-%20Como%20Diz%20a%20Escritura%20-%2016x23%20-%20PDF%20-%20Completo.pdf"
+               target="_blank" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Ler Online</a>
+          </div>
+        </div>
+        <div class="download-card download-card--epub fade-in fade-in--delay-1" data-dl-key="epub">
+          <div class="download-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <h3 class="download-card-title">EPUB — E-book</h3>
+          <p class="download-card-desc">Formato otimizado para leitores digitais (Kindle, Kobo, celular).</p>
+          <div class="download-card-meta">
+            <a href="book/Book_16x23-Sumario.epub"
+               class="btn btn-primary btn-sm" download>Baixar EPUB</a>
+            <span class="download-count"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> <strong>0</strong> downloads</span>
+          </div>
+        </div>
+        <div class="downloads-divider fade-in">
+          <span>ou baixe o livro completo dividido em duas partes</span>
+        </div>
+        <div class="download-card download-card--part fade-in fade-in--delay-2" data-dl-key="pdf_parte1">
+          <div class="download-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
+          <h3 class="download-card-title">PDF — Parte I</h3>
+          <p class="download-card-desc">Os cinco movimentos completos: O Problema, O Mapa, A Jornada, A Evidência e O Horizonte.</p>
+          <div class="download-card-meta">
+            <a href="book/Aquele%20Que%20Tem%20Sede%2C%20Venha%20a%20Mim%20e%20Beba%20-%20Como%20Diz%20a%20Escritura%20-%2016x23%20-%20PDF%20-%20Parte%20I.pdf"
+               class="btn btn-primary btn-sm" download>Baixar PDF</a>
+            <span class="download-count"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> <strong>0</strong> downloads</span>
+          </div>
+        </div>
+        <div class="download-card download-card--part fade-in fade-in--delay-3" data-dl-key="pdf_parte2">
+          <div class="download-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l8-2 8 2v16l-8-2-8 2V4z"/><path d="M10 2v16"/></svg></div>
+          <h3 class="download-card-title">PDF — Parte II</h3>
+          <p class="download-card-desc">Apêndices A–G: glossário, mapa tipológico, guia de estudo, perguntas frequentes e índice remissivo.</p>
+          <div class="download-card-meta">
+            <a href="book/Aquele%20Que%20Tem%20Sede%2C%20Venha%20a%20Mim%20e%20Beba%20-%20Como%20Diz%20a%20Escritura%20-%2016x23%20-%20PDF%20-%20Parte%20II.pdf"
+               class="btn btn-primary btn-sm" download>Baixar PDF</a>
+            <span class="download-count"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> <strong>0</strong> downloads</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <!-- <section class="section" id="depoimentos">
+    <div class="container container--narrow">
+      <div class="section-header fade-in">
+        <h2 class="section-title">O Que Estão Dizendo</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="ig-header">
+            <div class="ig-avatar" style="background:#b3a08b;">MC</div>
+            <div>
+              <div class="ig-user">@maria_clara_leitora</div>
+              <div class="ig-location">Aracaju, SE</div>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "Este livro mudou minha compreensão sobre o que realmente significa crer.
+            A abordagem a partir da raiz hebraica da fé abriu meus olhos para verdades
+            que estavam escondidas em textos que eu já conhecia."
+          </p>
+          <a href="https://instagram.com/p/SEU_POST_AQUI" target="_blank" rel="noopener" class="btn-ig">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            Ver no Instagram
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;">
+              <path d="M7 17l9.2-9.2M17 17V7H7"/>
+            </svg>
+          </a>
+        </div>
+        <div class="testimonial-card fade-in fade-in--delay-1">
+          <div class="ig-header">
+            <div class="ig-avatar" style="background:#8ba3a3;">FP</div>
+            <div>
+              <div class="ig-user">@felipe_pereira_livros</div>
+              <div class="ig-location">São Paulo, SP</div>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "Pastor Givaldo conseguiu traduzir conceitos teológicos profundos em uma
+            leitura acessível e transformadora. Recomendo a todos que buscam uma fé
+            mais sólida e bíblica."
+          </p>
+          <a href="https://instagram.com/p/SEU_POST_AQUI" target="_blank" rel="noopener" class="btn-ig">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            Ver no Instagram
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;">
+              <path d="M7 17l9.2-9.2M17 17V7H7"/>
+            </svg>
+          </a>
+        </div>
+        <div class="testimonial-card fade-in fade-in--delay-2">
+          <div class="ig-header">
+            <div class="ig-avatar" style="background:#b3a08b;">AL</div>
+            <div>
+              <div class="ig-user">@analuciabooks</div>
+              <div class="ig-location">Recife, PE</div>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "O capítulo sobre a raiz אמן (AMN) foi um divisor de águas para mim.
+            Finalmente entendi por que a fé é descrita como 'apoio' e não apenas
+            'crença intelectual'. Leitura essencial."
+          </p>
+          <a href="https://instagram.com/p/SEU_POST_AQUI" target="_blank" rel="noopener" class="btn-ig">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            Ver no Instagram
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;">
+              <path d="M7 17l9.2-9.2M17 17V7H7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- INSTAGRAM CTA -->
+  <section class="section section--white">
+    <div class="container container--narrow">
+      <div class="ig-cta fade-in">
+        <div class="ig-cta-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Acompanhe no Instagram</h3>
+        <p class="ig-cta-handle">@givaldosilvacon</p>
+        <p>
+          Em breve: Devocionais, estudos bíblicos, prévias do livro e reflexões
+          sobre a fé — diretamente no seu feed.
+        </p>
+        <a href="https://instagram.com/givaldosilvacon" target="_blank" rel="noopener" class="btn btn-instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Seguir @givaldosilvacon →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIX -->
+  <section class="section section--alt" id="contribuir">
+    <div class="container container--narrow">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Contribua Voluntariamente</h2>
+        <p class="section-desc">
+          Este livro é gratuito e distribuído livremente. Se ele foi útil para você,
+          considere fazer uma contribuição voluntária via Pix.
+        </p>
+      </div>
+      <div class="pix-grid fade-in fade-in--delay-1">
+        <div class="pix-info">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> Sua contribuição faz diferença</h3>
+          <p>
+            Todo valor é bem-vindo e ajuda a manter este e futuros projetos de
+            distribuição gratuita de conteúdo bíblico de qualidade.
+          </p>
+          <div class="pix-key-box">
+            <code>givaldosilvacon@gmail.com</code>
+            <button class="btn btn-accent btn-sm pix-copy-btn">Copiar</button>
+          </div>
+          <p style="margin-top:12px;font-size:0.78rem;color:var(--text-light);font-family:var(--font-sans);">
+            Titular: Givaldo Silva da Conceição
+          </p>
+        </div>
+        <div class="pix-qr">
+          <div class="pix-qr-placeholder" id="pix-qr">
+            <img src="img/qrplus-pix.jpg" alt="QR Code PIX para contribuição voluntária" loading="lazy">
+          </div>
+          <p class="pix-titular">Pix — Chave: e-mail</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-verse">
+        "Se alguém tem sede, venha a mim e beba."
+        <cite>— João 7:37</cite>
+      </p>
+      <div class="footer-links">
+        <a href="https://instagram.com/givaldosilvacon" target="_blank" rel="noopener" aria-label="Instagram" title="@givaldosilvacon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="mailto:givaldosilvacon@gmail.com" aria-label="E-mail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6l8 6 8-6"/>
+            <path d="M4 6v12a2 2 0 002 2h12a2 2 0 002-2V6"/>
+          </svg>
+        </a>
+        <a href="#livro" aria-label="Início">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5"/>
+            <path d="M5 12l7-7 7 7"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-copy">
+        &copy; <span class="footer-year">2026</span> Givaldo S. Conceição —
+        Distribuição gratuita • São Cristóvão, SE
+      </p>
+    </div>
+  </footer>
+
+  <a href="https://instagram.com/givaldosilvacon" target="_blank" rel="noopener" class="ig-float" aria-label="Seguir @givaldosilvacon no Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="5"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+    </svg>
+    <span>Seguir</span>
+  </a>
+
+  <script src="js/main.js"></script>
 </body>
-</html>   
+</html>
