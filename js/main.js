@@ -35,20 +35,37 @@
 
   // ---- DOWNLOAD COUNTERS ----
   const STORAGE_PREFIX = 'book_dl_';
+  const COUNT_API = 'https://countapi.mileshilliard.com/api/v1';
 
-  function getCount(key) {
+  function getLocalCount(key) {
     const val = localStorage.getItem(STORAGE_PREFIX + key);
     return val ? parseInt(val, 10) : 0;
   }
 
-  function setCount(key, count) {
+  function setLocalCount(key, count) {
     localStorage.setItem(STORAGE_PREFIX + key, count);
   }
 
-  function incrementCount(key) {
-    const count = getCount(key) + 1;
-    setCount(key, count);
-    return count;
+  async function getRemoteCount(key) {
+    try {
+      const res = await fetch(COUNT_API + '/get/' + key, { mode: 'cors' });
+      if (!res.ok) return null;
+      const data = await res.json();
+      return (data && typeof data.value === 'number') ? data.value : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async function hitRemoteCount(key) {
+    try {
+      const res = await fetch(COUNT_API + '/hit/' + key, { mode: 'cors', keepalive: true });
+      if (!res.ok) return null;
+      const data = await res.json();
+      return (data && typeof data.value === 'number') ? data.value : null;
+    } catch (e) {
+      return null;
+    }
   }
 
   function formatCount(n) {
@@ -62,7 +79,14 @@
     const btn = card.querySelector('.btn');
 
     if (key && countEl) {
-      countEl.textContent = formatCount(getCount(key));
+      countEl.textContent = formatCount(getLocalCount(key));
+
+      getRemoteCount(key).then(remote => {
+        if (remote !== null) {
+          setLocalCount(key, remote);
+          countEl.textContent = formatCount(remote);
+        }
+      });
     }
 
     if (btn && key) {
@@ -70,8 +94,16 @@
         const href = this.getAttribute('href');
         if (!href || href === '#') return;
 
-        const newCount = incrementCount(key);
-        if (countEl) countEl.textContent = formatCount(newCount);
+        hitRemoteCount(key).then(remote => {
+          if (remote !== null) {
+            setLocalCount(key, remote);
+            if (countEl) countEl.textContent = formatCount(remote);
+          } else {
+            const fallback = getLocalCount(key) + 1;
+            setLocalCount(key, fallback);
+            if (countEl) countEl.textContent = formatCount(fallback);
+          }
+        });
 
         showToast('Download iniciado!');
       });
