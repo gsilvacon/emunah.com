@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estatísticas de downloads — emunah.com</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root {
+    --primary: #7B5B3A;
+    --primary-dark: #5C3F24;
+    --accent: #C9A96B;
+    --teal: #4A7C7C;
+    --bg: #FAF8F4;
+    --bg-alt: #F3EFE8;
+    --surface: #FFFFFF;
+    --text: #1E1E2A;
+    --text-secondary: #6B6B7B;
+    --text-light: #9A9AAB;
+    --border: #E8E0D4;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, 'Merriweather', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 40px 24px 60px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 24px;
+  }
+  h1 { font-size: 1.5rem; color: var(--primary-dark); }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--text-secondary); font-size: 0.85rem; font-family: 'Inter', sans-serif; }
+  .toolbar { display: flex; align-items: center; gap: 12px; }
+  #updated { font-family: 'Inter', sans-serif; font-size: 0.8rem; color: var(--text-light); }
+  button {
+    font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 600;
+    background: var(--primary); color: #fff; border: none; border-radius: 8px;
+    padding: 9px 16px; cursor: pointer;
+  }
+  button:hover { background: var(--primary-dark); }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 24px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .card .label { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+  .card .value { font-size: 1.8rem; font-weight: 700; color: var(--primary-dark); margin-top: 4px; }
+  .card .value small { font-size: 1rem; color: var(--text-light); font-weight: 400; }
+  .panel {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    margin-bottom: 20px; overflow: hidden;
+  }
+  .panel h2 {
+    font-size: 0.95rem; color: var(--primary-dark); padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .panel h2 .total { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--text-secondary); }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 10px 20px; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  th { color: var(--text-light); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); background: var(--bg-alt); }
+  td { border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.num { font-weight: 600; color: var(--primary-dark); }
+  td.key { color: var(--text-light); font-size: 0.72rem; }
+  #state { font-family: 'Inter', sans-serif; font-size: 0.8rem; color: var(--text-secondary); text-align: center; padding: 8px 0; }
+  #state.error { color: #b3402f; }
+  .footer { text-align: center; font-family: 'Inter', sans-serif; font-size: 0.72rem; color: var(--text-light); margin-top: 28px; }
+  @media (max-width: 640px) {
+    .cards { grid-template-columns: 1fr; }
+    th.key { display: none; } td.key { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Estatísticas de downloads <span>· emunah.com</span></h1>
+      <div class="sub">Acompanhamento interno — página não listada no site público.</div>
+    </div>
+    <div class="toolbar">
+      <span id="updated">atualizando…</span>
+      <button id="refresh" type="button">Atualizar agora</button>
+    </div>
+  </header>
+
+  <div class="cards">
+    <div class="card"><div class="label">Total geral</div><div class="value" id="c-total">—</div></div>
+    <div class="card"><div class="label">Livros (PDF + EPUB)</div><div class="value" id="c-books">—</div></div>
+    <div class="card"><div class="label">Áudio (faixas)</div><div class="value" id="c-audio">—</div></div>
+  </div>
+
+  <div class="panel">
+    <h2>Livros <span class="total" id="t-books"></span></h2>
+    <table>
+      <thead><tr><th>Item</th><th>Chave</th><th class="num">Downloads</th></tr></thead>
+      <tbody id="rows-books"></tbody>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>Áudio <span class="total" id="t-audio"></span></h2>
+    <table>
+      <thead><tr><th>Faixa</th><th>Chave</th><th class="num">Downloads</th></tr></thead>
+      <tbody id="rows-audio"></tbody>
+    </table>
+  </div>
+
+  <div id="state">Carregando dados…</div>
+  <div class="footer">Os contadores são agregados via countapi (anônimos, sem dados pessoais). Atualização automática a cada 15 s.</div>
+</div>
+
+<script>
+(function () {
+  const COUNT_API = 'https://countapi.mileshilliard.com/api/v1';
+  const AUDIO_ORDER = [
+    '00_prefacio',
+    'cap_01', 'cap_02', 'cap_03', 'cap_04', 'cap_05',
+    'cap_06', 'cap_07', 'cap_08', 'cap_09', 'cap_10',
+    'cap_11', 'cap_12', 'cap_13', 'cap_14', 'cap_15',
+    'cap_16', 'cap_17', 'cap_18', 'cap_19', 'cap_20',
+    'epilogo'
+  ];
+  const BOOKS = [
+    { label: 'PDF Completo (308 págs)', key: 'pdf_completo' },
+    { label: 'EPUB — E-book', key: 'epub' },
+    { label: 'PDF — Parte I (capítulos)', key: 'pdf_parte1' },
+    { label: 'PDF — Parte II (apêndices)', key: 'pdf_parte2' }
+  ];
+  const AUDIO = [
+    { label: 'Prefácio', id: '00_prefacio' },
+    { label: 'Capítulo 1', id: 'cap_01' },
+    { label: 'Capítulo 2', id: 'cap_02' },
+    { label: 'Capítulo 3', id: 'cap_03' },
+    { label: 'Capítulo 4', id: 'cap_04' },
+    { label: 'Capítulo 5', id: 'cap_05' },
+    { label: 'Capítulo 6', id: 'cap_06' },
+    { label: 'Capítulo 7', id: 'cap_07' },
+    { label: 'Capítulo 8', id: 'cap_08' },
+    { label: 'Capítulo 9', id: 'cap_09' },
+    { label: 'Capítulo 10', id: 'cap_10' },
+    { label: 'Capítulo 11', id: 'cap_11' },
+    { label: 'Capítulo 12', id: 'cap_12' },
+    { label: 'Capítulo 13', id: 'cap_13' },
+    { label: 'Capítulo 14', id: 'cap_14' },
+    { label: 'Capítulo 15', id: 'cap_15' },
+    { label: 'Capítulo 16', id: 'cap_16' },
+    { label: 'Capítulo 17', id: 'cap_17' },
+    { label: 'Capítulo 18', id: 'cap_18' },
+    { label: 'Capítulo 19', id: 'cap_19' },
+    { label: 'Capítulo 20', id: 'cap_20' },
+    { label: 'Epílogo', id: 'epilogo' }
+  ];
+
+  const stateEl = document.getElementById('state');
+  const updatedEl = document.getElementById('updated');
+  let loading = false;
+
+  function fmt(n) {
+    if (n >= 1000000) return (n / 1000000).toFixed(1).replace('.0', '') + 'M';
+    if (n >= 1000) return (n / 1000).toFixed(1).replace('.0', '') + 'k';
+    return String(n);
+  }
+
+  function getCount(key) {
+    return fetch(COUNT_API + '/get/' + key, { mode: 'cors' })
+      .then(function (res) {
+        if (!res.ok) return 0;
+        return res.json();
+      })
+      .then(function (data) {
+        return (data && typeof data.value === 'number') ? data.value : 0;
+      })
+      .catch(function () { return 0; });
+  }
+
+  function renderRows(tbodyId, items, getKey, sum) {
+    const tbody = document.getElementById(tbodyId);
+    const rows = items.map(function (it) {
+      const key = getKey(it);
+      return '<tr>' +
+        '<td>' + it.label + '</td>' +
+        '<td class="key">' + key + '</td>' +
+        '<td class="num">' + fmt(it.count) + '</td>' +
+        '</tr>';
+    });
+    tbody.innerHTML = rows.join('');
+    sum.textContent = fmt(items.reduce(function (a, b) { return a + b.count; }, 0)) + ' downloads';
+  }
+
+  function refresh() {
+    if (loading) return;
+    loading = true;
+    stateEl.textContent = 'Carregando dados…';
+    stateEl.className = '';
+
+    const bookP = BOOKS.map(function (b) {
+      return getCount(b.key).then(function (c) { b.count = c; });
+    });
+    const audioP = AUDIO.map(function (a) {
+      return getCount('audio_' + a.id).then(function (c) { a.count = c; });
+    });
+
+    Promise.all(bookP.concat(audioP)).then(function () {
+      const totalBooks = BOOKS.reduce(function (a, b) { return a + b.count; }, 0);
+      const totalAudio = AUDIO.reduce(function (a, b) { return a + b.count; }, 0);
+      const total = totalBooks + totalAudio;
+
+      document.getElementById('c-total').innerHTML = fmt(total) + ' <small>downloads</small>';
+      document.getElementById('c-books').innerHTML = fmt(totalBooks) + ' <small>downloads</small>';
+      document.getElementById('c-audio').innerHTML = fmt(totalAudio) + ' <small>downloads</small>';
+
+      renderRows('rows-books', BOOKS, function (b) { return b.key; }, document.getElementById('t-books'));
+      renderRows('rows-audio', AUDIO, function (a) { return 'audio_' + a.id; }, document.getElementById('t-audio'));
+
+      updatedEl.textContent = 'atualizado às ' + new Date().toLocaleTimeString('pt-BR');
+      stateEl.textContent = 'Dados carregados.';
+      loading = false;
+    });
+  }
+
+  document.getElementById('refresh').addEventListener('click', refresh);
+  refresh();
+  setInterval(refresh, 15000);
+})();
+</script>
+</body>
+</html>

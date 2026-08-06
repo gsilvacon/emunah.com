@@ -1,0 +1,156 @@
+[
+  {
+    "id": "00_prefacio",
+    "title": "Prefácio — A Pergunta que Mudou Tudo",
+    "file": "00_prefacio.mp3",
+    "size_kb": 3871,
+    "duration_min": 11.0
+  },
+  {
+    "id": "cap_01",
+    "title": "Capítulo 1 — A Fé que Herdamos",
+    "file": "cap_01.mp3",
+    "size_kb": 7798,
+    "duration_min": 22.2
+  },
+  {
+    "id": "cap_02",
+    "title": "Capítulo 2 — O Contexto que Muda Tudo — Sukkot",
+    "file": "cap_02.mp3",
+    "size_kb": 7002,
+    "duration_min": 19.9
+  },
+  {
+    "id": "cap_03",
+    "title": "Capítulo 3 — A Raiz que Ninguém Nos Ensinou — AMN",
+    "file": "cap_03.mp3",
+    "size_kb": 10261,
+    "duration_min": 29.2
+  },
+  {
+    "id": "cap_04",
+    "title": "Capítulo 4 — A Água que Atravessa Toda a Escritura",
+    "file": "cap_04.mp3",
+    "size_kb": 8105,
+    "duration_min": 23.1
+  },
+  {
+    "id": "cap_05",
+    "title": "Capítulo 5 — O Servo que Ninguém Esperava — Isaías 53",
+    "file": "cap_05.mp3",
+    "size_kb": 8750,
+    "duration_min": 24.9
+  },
+  {
+    "id": "cap_06",
+    "title": "Capítulo 6 — O Rei Eterno — Salmos e o Pacto Davídico",
+    "file": "cap_06.mp3",
+    "size_kb": 9164,
+    "duration_min": 26.1
+  },
+  {
+    "id": "cap_07",
+    "title": "Capítulo 7 — O Nome Acima de Todo Nome — EU SOU",
+    "file": "cap_07.mp3",
+    "size_kb": 8315,
+    "duration_min": 23.7
+  },
+  {
+    "id": "cap_08",
+    "title": "Capítulo 8 — O Cordeiro que a Escritura Sempre Anunciou",
+    "file": "cap_08.mp3",
+    "size_kb": 9581,
+    "duration_min": 27.3
+  },
+  {
+    "id": "cap_09",
+    "title": "Capítulo 9 — O Ponto de Partida — A Sede",
+    "file": "cap_09.mp3",
+    "size_kb": 7938,
+    "duration_min": 22.6
+  },
+  {
+    "id": "cap_10",
+    "title": "Capítulo 10 — Ouvir de Verdade — Shama",
+    "file": "cap_10.mp3",
+    "size_kb": 8160,
+    "duration_min": 23.2
+  },
+  {
+    "id": "cap_11",
+    "title": "Capítulo 11 — Voltar-se — Shuv",
+    "file": "cap_11.mp3",
+    "size_kb": 9355,
+    "duration_min": 26.6
+  },
+  {
+    "id": "cap_12",
+    "title": "Capítulo 12 — Apoiar o Peso — Vatach",
+    "file": "cap_12.mp3",
+    "size_kb": 7973,
+    "duration_min": 22.7
+  },
+  {
+    "id": "cap_13",
+    "title": "Capítulo 13 — Beber — O Ato de Receber por Dentro",
+    "file": "cap_13.mp3",
+    "size_kb": 9651,
+    "duration_min": 27.5
+  },
+  {
+    "id": "cap_14",
+    "title": "Capítulo 14 — Nascer de Novo — O Que Só Deus Pode Fazer",
+    "file": "cap_14.mp3",
+    "size_kb": 9809,
+    "duration_min": 27.9
+  },
+  {
+    "id": "cap_15",
+    "title": "Capítulo 15 — O Sinal Interno — Abba Pai",
+    "file": "cap_15.mp3",
+    "size_kb": 8736,
+    "duration_min": 24.9
+  },
+  {
+    "id": "cap_16",
+    "title": "Capítulo 16 — O Sinal Externo — Os Rios que Transbordam",
+    "file": "cap_16.mp3",
+    "size_kb": 10028,
+    "duration_min": 28.5
+  },
+  {
+    "id": "cap_17",
+    "title": "Capítulo 17 — A Fome que Só Cresce",
+    "file": "cap_17.mp3",
+    "size_kb": 9520,
+    "duration_min": 27.1
+  },
+  {
+    "id": "cap_18",
+    "title": "Capítulo 18 — Da Fonte ao Rio — Tornando-se Canal",
+    "file": "cap_18.mp3",
+    "size_kb": 8846,
+    "duration_min": 25.2
+  },
+  {
+    "id": "cap_19",
+    "title": "Capítulo 19 — Perseverar — A Fé no Tempo Longo",
+    "file": "cap_19.mp3",
+    "size_kb": 7403,
+    "duration_min": 21.1
+  },
+  {
+    "id": "cap_20",
+    "title": "Capítulo 20 — O Convite Final — Apocalipse 22:17",
+    "file": "cap_20.mp3",
+    "size_kb": 4770,
+    "duration_min": 13.6
+  },
+  {
+    "id": "epilogo",
+    "title": "Epílogo — Ainda com Sede, mas de um Jeito Diferente",
+    "file": "epilogo.mp3",
+    "size_kb": 3684,
+    "duration_min": 10.5
+  }
+]
